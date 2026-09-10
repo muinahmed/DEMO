@@ -1,0 +1,373 @@
+/* ========================================
+   RESET
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ========================================
+   BODY
+   ======================================== */
+
+body {
+    font-family: Arial, sans-serif;
+
+    background-color: #f4f4f4;
+
+    color: #222;
+}
+
+
+/* ========================================
+   NAVBAR
+   ======================================== */
+
+.navbar {
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+
+    padding: 20px 50px;
+
+
+    background-color: #111;
+
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ========================================
+   LOGO
+   ======================================== */
+
+.logo {
+    color: white;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+/* ========================================
+   MAIN NAVIGATION
+   ======================================== */
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    list-style: none;
+}
+
+
+/* ========================================
+   EACH MAIN MENU ITEM
+   ======================================== */
+
+.nav-links > li {
+    position: relative;
+}
+
+
+/* ========================================
+   MAIN NAVIGATION LINKS
+   ======================================== */
+
+.nav-links > li > a {
+    display: inline-block;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+    padding: 10px 5px;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* ========================================
+   MAIN LINK HOVER
+   ======================================== */
+
+.nav-links > li > a:hover {
+    color: #aaa;
+
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   DROPDOWN MENU
+   ======================================== */
+
+.dropdown-menu {
+    position: absolute;
+
+    top: 100%;
+
+    left: 0;
+
+
+    min-width: 180px;
+
+
+    background-color: #222;
+
+
+    list-style: none;
+
+
+    padding: 10px 0;
+
+
+    border-radius: 8px;
+
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+
+
+    /* Hide dropdown */
+
+    opacity: 0;
+
+    visibility: hidden;
+
+
+    /* Move slightly downward */
+
+    transform: translateY(10px);
+
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        visibility 0.3s ease;
+}
+
+
+/* ========================================
+   SHOW DROPDOWN ON HOVER
+   ======================================== */
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+
+/* ========================================
+   DROPDOWN LINKS
+   ======================================== */
+
+.dropdown-menu li a {
+    display: block;
+
+
+    padding: 12px 20px;
+
+
+    color: white;
+
+
+    text-decoration: none;
+
+
+    font-size: 16px;
+
+
+    transition:
+        background-color 0.3s ease,
+        padding-left 0.3s ease;
+}
+
+
+/* ========================================
+   DROPDOWN LINK HOVER
+   ======================================== */
+
+.dropdown-menu li a:hover {
+    background-color: #333;
+
+    padding-left: 27px;
+}
+
+
+/* ========================================
+   CONTACT BUTTON
+   ======================================== */
+
+.contact-btn {
+    padding: 10px 20px !important;
+
+    border: 1px solid white;
+
+    border-radius: 20px;
+}
+
+
+/* ========================================
+   CONTACT BUTTON HOVER
+   ======================================== */
+
+.contact-btn:hover {
+    background-color: white;
+
+    color: black !important;
+}
+
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+
+.hero {
+    min-height: 550px;
+
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+
+    text-align: center;
+
+
+    padding: 40px;
+}
+
+
+/* Hero title */
+
+.hero h1 {
+    font-size: 45px;
+
+    margin-bottom: 15px;
+}
+
+
+/* Hero paragraph */
+
+.hero p {
+    font-size: 18px;
+
+    margin-bottom: 25px;
+}
+
+
+/* Hero button */
+
+.hero button {
+    padding: 12px 25px;
+
+
+    border: none;
+
+
+    border-radius: 25px;
+
+
+    background-color: #111;
+
+
+    color: white;
+
+
+    font-size: 16px;
+
+
+    cursor: pointer;
+
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Hero button hover */
+
+.hero button:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ========================================
+   CONTENT SECTION
+   ======================================== */
+
+.content {
+    max-width: 800px;
+
+
+    margin: 50px auto;
+
+
+    padding: 40px;
+
+
+    background-color: white;
+
+
+    border-radius: 10px;
+
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Section heading */
+
+.content h2 {
+    display: inline-block;
+
+
+    border-bottom: 2px solid #111;
+
+
+    padding-bottom: 5px;
+
+
+    margin-bottom: 15px;
+}
+
+
+/* Paragraph */
+
+.content p {
+    line-height: 1.7;
+}
